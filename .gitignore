@@ -1,2 +1,5 @@
-foo.db
+fox.db
 .vscode
+data
+__pycache__
+data_test
