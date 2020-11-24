@@ -18,3 +18,15 @@ class Tran(Model):
     @belongs_to_many
     def entries(self):
         return Entry
+    
+    @belongs_to_many
+    def trains(self):
+        return Train
+
+
+class Train(Model):
+   __fillable__ = ['name']
+
+   @belongs_to_many
+   def trans(self):
+       return Tran

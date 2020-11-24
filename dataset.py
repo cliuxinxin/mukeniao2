@@ -2,9 +2,8 @@ from orms import Tran,Entry
 import imageio
 import tensorflow as tf
 
-
-def generate_dataset(gen_name='generate_train'):
-    tran = Tran.where('name','=','generate_train').first()
+def generate_dataset(name='generate_train'):
+    tran = Tran.where('name','=',name).first()
 
     def dataset_fn():
         for entry in tran.entries().get():
