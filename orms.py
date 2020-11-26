@@ -1,5 +1,5 @@
 from orator import Model
-from orator.orm import belongs_to_many
+from orator.orm import belongs_to_many,has_many,belongs_to
 
 from config import db
 
@@ -30,3 +30,15 @@ class Train(Model):
    @belongs_to_many
    def trans(self):
        return Tran
+
+   @has_many
+   def results(self):
+       return Result
+
+class Result(Model):
+    __fillable__ = ['key','value'] 
+
+    @belongs_to
+    def trains(self):
+        return Train
+

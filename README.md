@@ -1,5 +1,9 @@
 # mukeniao2
 
+#TODO
+1.提取超参数
+
+
 # 如何使用
 1. 新建data_test目录
 2. 把mnist的图片拷贝进去 
